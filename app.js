@@ -1,11 +1,16 @@
 const express = require("express");
-
 const app = express();
 
 
-app.listen(3000, () => console.log("The server is running"))
 
-app.get("/", (req, res) => {
-    console.log('OK NOW');
-    //res.send("OK")
+
+//server
+app.listen(3000)
+
+app.get("/info", (req, res) => {
+    console.log('aaaaa');
+
+    res.send({message: "ok"})
 })
+
+
